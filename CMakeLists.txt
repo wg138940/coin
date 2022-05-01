@@ -74,8 +74,6 @@ include(CheckCXXCompilerFlag)
 # Always disable certain warnings
 if(MSVC)
   add_definitions(-D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS)
-  # Link with the static runtime
-  add_compile_options(/MT$<$<CONFIG:Debug>:d>)
 endif()
 
 if (COIN_DISABLE_WARNINGS)
